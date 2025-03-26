@@ -48,12 +48,11 @@ public class homeActivity extends AppCompatActivity {
         // Retrieve the logged-in user's email from SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
         String userEmail = sharedPreferences.getString("userEmail", "");
-        String userAddress = sharedPreferences.getString("userAddress", "");
-        String userPhone = sharedPreferences.getString("userPhone", "");
+
 
 
         // Fetch the user's name from the database
-        String userDetail = dbHelper.fetchUserData(userEmail,userAddress,userPhone);
+        String userDetail = dbHelper.fetchUserData(userEmail);
 
 
         if (userDetail != null) {

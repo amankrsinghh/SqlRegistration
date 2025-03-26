@@ -81,7 +81,7 @@ public class SqlHelper extends SQLiteOpenHelper {
     }
 
     // Method to fetch user data by email
-    public String fetchUserData(String email, String address, String phone) {
+    public String fetchUserData(String email) {
         SQLiteDatabase db = this.getReadableDatabase();
         String query = "SELECT name, address, phone FROM users WHERE email = ?";
         String[] selectionArgs = {email};
