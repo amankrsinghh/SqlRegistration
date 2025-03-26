@@ -50,11 +50,11 @@
 
             </ImageView>
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="Your Account Details"
                 android:gravity="center"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:padding="8dp"
                 android:textStyle="bold|italic"
                 android:layout_marginBottom="7dp"
@@ -63,10 +63,10 @@
 
             <TextView
                 android:id="@+id/displaydata"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="30dp"
+                android:textSize="20sp"
                 android:padding="8dp"
                 android:textColor="@color/black"
                 android:background="@drawable/textbg"
