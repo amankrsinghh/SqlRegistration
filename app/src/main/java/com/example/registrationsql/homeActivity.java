@@ -53,12 +53,12 @@ public class homeActivity extends AppCompatActivity {
 
 
         // Fetch the user's name from the database
-        String userName = dbHelper.fetchUserData(userEmail,userAddress,userPhone);
+        String userDetail = dbHelper.fetchUserData(userEmail,userAddress,userPhone);
 
-        if (userName != null) {
-           displaydata.setText("Welcome, " + userName + "!\n");
-            displaydata.append(" Address: " + userAddress+"\n");
-            displaydata.append(" Phone: " + userPhone);
+
+        if (userDetail != null) {
+           displaydata.setText("Welcome, " + userDetail );
+
         } else {
             displaydata.setText("Welcome, User!");
         }

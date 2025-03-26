@@ -99,8 +99,7 @@ public class SqlHelper extends SQLiteOpenHelper {
 
         }
         cursor.close();
-        return userName;
-        // Return the fetched name
+        return userName +"✅"+ "\n"+ "Address: " + userAddress +"\n"+ "Phone: " + userPhone;
 
     }
 
