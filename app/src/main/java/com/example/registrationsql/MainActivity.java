@@ -66,8 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
                 } else {
                     dbHelper.insertUser(name, email, password, address, phone);
-                    Intent intent = new Intent(MainActivity.this, login.class);
-                    startActivity(intent);
+
                     SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("userAddress", address);
@@ -75,8 +74,6 @@ public class MainActivity extends AppCompatActivity {
                     editor.apply();
 
 
-                    // Close the current activity (optional)
-                    finish();
 
                 }
             }

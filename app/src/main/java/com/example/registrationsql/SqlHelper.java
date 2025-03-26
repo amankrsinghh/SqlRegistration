@@ -2,6 +2,7 @@ package com.example.registrationsql;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -62,9 +63,12 @@ public class SqlHelper extends SQLiteOpenHelper {
 
         long result = db.insert(TABLE_NAME, null, values);
         if (result == -1) {
-            Toast.makeText(context, "Failed to Register", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Failed to Register Or User Already Exists!", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(context, "User Registered Successfully!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(context, login.class);
+            context.startActivity(intent);
+            ((MainActivity) context).finish();
         }
     }
 
